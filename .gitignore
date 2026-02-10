@@ -5,4 +5,10 @@ __pycache__
 MUJOCO_LOG.TXT
 mujoco_menagerie
 checkpoints/
-logs
+# Ignore all log contents by default
+logs/*
+# But allow the experiment config files
+!logs/**/config.json
+!logs/**/ppo_network_config.json
+# Keep the heavy checkpoint data out
+logs/**/checkpoints/*/

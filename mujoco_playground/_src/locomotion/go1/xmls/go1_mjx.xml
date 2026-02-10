@@ -1,5 +1,5 @@
 <mujoco model="go1">
-  <compiler angle="radian" meshdir="../../../../../mujoco_menagerie/unitree_go1/assets" autolimits="true"/>
+  <compiler angle="radian" meshdir="../../../../external_deps/mujoco_menagerie/unitree_go1/assets" autolimits="true"/>
 
   <option iterations="1" ls_iterations="5" timestep="0.004" integrator="Euler">
     <flag eulerdamp="disable"/>
@@ -88,6 +88,8 @@
       <geom class="visual" mesh="trunk"/>
       <geom class="collision" quat="1 0 1 0" pos="0 -0.04 0" size="0.058 0.125" type="cylinder"/>
       <geom class="collision" quat="1 0 1 0" pos="0 +0.04 0" size="0.058 0.125" type="cylinder"/>
+      <geom name="supply_box" type="box" size="0.08 0.06 0.04" pos="-0.25 0 0.05"
+            rgba="0.8 0.1 0.1 1" mass="3.0" contype="0" conaffinity="0"/>
       <site name="imu" pos="-0.01592 -0.06659 -0.00617" group="5"/>
       <body name="FR_hip" pos="0.1881 -0.04675 0">
         <inertial pos="-0.0049166 0.00762615 -8.865e-05" quat="0.507341 0.514169 0.495027 0.482891" mass="0.68"
